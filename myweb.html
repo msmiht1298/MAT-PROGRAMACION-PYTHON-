@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario STM Company</title>
+    <style>
+        body {
+            background-color: #7d0848; /* Azul claro semi oscuro */
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+        h1 {
+            color: red; /* Color llamativo rojo */
+            font-size: 2.5em;
+        }
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            margin: auto;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        label {
+            color: black;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"] {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"], input[type="button"] {
+            padding: 10px 15px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"] {
+            background-color: red;
+            color: white;
+        }
+        input[type="button"] {
+            background-color: gray;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>STM Company</h1>
+    <form action="procesar_formulario.php" method="post">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br>
+        
+        <label for="apellido">Apellido:</label><br>
+        <input type="text" id="apellido" name="apellido" required><br>
+        
+        <label for="correo">Correo:</label><br>
+        <input type="email" id="correo" name="correo" required><br>
+        
+        <label for="ciudad">Ciudad:</label><br>
+        <input type="text" id="ciudad" name="ciudad" required><br>
+        
+        <input type="submit" value="Registrar">
+        <input type="button" value="Cancelar" onclick="window.location.href='index.html';">
+    </form>
+</body>
+</html>
